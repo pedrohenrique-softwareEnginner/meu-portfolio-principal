@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPulse | Portal de Notícias Automatizado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+
+    <header>
+        <div class="logo">⚡ Tech<span>Pulse</span></div>
+        
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-btn">☀️ Mode</button>
+            <a href="../index.html" class="btn-back">← Voltar ao Portfólio</a>
+        </div>
+    </header>
+
+    <main class="portal-container">
+        
+        <section class="main-news">
+            <div class="badge-tag hot" id="news-status">Feed Atualizado às 07:00</div>
+            <h1 id="main-title">Carregando manchete do dia...</h1>
+            <p class="news-meta">Por Sistema TechPulse • <span id="news-date">--/--/----</span></p>
+            <p class="news-excerpt" id="main-excerpt">Aguardando processamento dos dados matinais...</p>
+            <a href="#" class="read-more">Ler Artigo Completo →</a>
+        </section>
+
+        <section class="news-grid">
+            <article class="news-card">
+                <div class="badge-tag">Engenharia</div>
+                <h3>Clean Code vs Performance: Como equilibrar?</h3>
+                <p>Manter o código legível e modular sem sacrificar os milissegundos críticos de renderização.</p>
+                <a href="#" class="card-link">Ler mais</a>
+            </article>
+
+            <article class="news-card">
+                <div class="badge-tag">Privacidade</div>
+                <h3>Adequação à LGPD em Bancos de Dados</h3>
+                <p>Como garantir o princípio da minimização de dados e mascaramento de informações sensíveis.</p>
+                <a href="#" class="card-link">Ler mais</a>
+            </article>
+
+            <article class="news-card">
+                <div class="badge-tag">DevOps</div>
+                <h3>Arquitetura Serverless na Nuvem</h3>
+                <p>Descubra como startups estão eliminando servidores ociosos pagando apenas por execução.</p>
+                <a href="#" class="card-link">Ler mais</a>
+            </article>
+        </section>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

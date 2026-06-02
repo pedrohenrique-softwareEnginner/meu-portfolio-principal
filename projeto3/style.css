@@ -1,0 +1,196 @@
+/* ==========================================================================
+   CONFIGURAÇÕES GERAIS E PALETA CYBERPUNK
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Fonte estilo terminal */
+}
+
+body {
+    background-color: #06090f;
+    color: #cbd5e1;
+    min-height: 100vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-container {
+    width: 100%;
+    max-width: 1100px;
+    background-color: #0b111e;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   CABEÇALHO DO SISTEMA
+   ========================================================================== */
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #1e293b;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.logo {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #38bdf8;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.3);
+}
+
+.status-badge {
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.status-green { background-color: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid #10b981; }
+.status-yellow { background-color: rgba(245, 158, 11, 0.2); color: #f55e0b; border: 1px solid #f55e0b; }
+.status-red { background-color: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid #ef4444; animation: pulse 1.5s infinite; }
+
+/* ==========================================================================
+   LAYOUT EM GRADE (GRID)
+   ========================================================================== */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .dashboard-grid { grid-template-columns: 1fr; }
+}
+
+.card {
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 6px;
+    padding: 1.5rem;
+    transition: all 0.4s ease;
+}
+
+/* ==========================================================================
+   PAINEL DE CONTROLE (INPUTS)
+   ========================================================================== */
+h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    color: #f8fafc;
+    border-left: 3px solid #38bdf8;
+    padding-left: 0.5rem;
+}
+
+.instruction {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    margin-bottom: 1.25rem;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: #94a3b8;
+}
+
+.input-group label span {
+    color: #38bdf8;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #38bdf8;
+    cursor: pointer;
+}
+
+select {
+    width: 100%;
+    padding: 0.6rem;
+    background-color: #0b111e;
+    border: 1px solid #334155;
+    color: #cbd5e1;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   PAINEL DE EXIBIÇÃO (REATIVIDADE DE CORES)
+   ========================================================================== */
+.display-panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.score-container {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 1rem 0;
+    transition: color 0.3s ease;
+}
+
+.score-max {
+    font-size: 1.5rem;
+    color: #475569;
+}
+
+/* Barra de Progresso */
+.progress-bar-container {
+    width: 100%;
+    height: 12px;
+    background-color: #1e293b;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s ease, background-color 0.3s ease;
+}
+
+.verdict-container h4 {
+    font-size: 0.9rem;
+    color: #94a3b8;
+    margin-bottom: 0.25rem;
+}
+
+#risk-verdict {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* ESTADOS DINÂMICOS DE RISCO (Geridos pelo JS) */
+.risk-low { color: #10b981; }
+.risk-medium { color: #f59e0b; }
+.risk-high { color: #ef4444; }
+
+.risk-level-low { border-color: rgba(16, 185, 129, 0.3); box-shadow: inset 0 0 15px rgba(16, 185, 129, 0.05); }
+.risk-level-medium { border-color: rgba(245, 158, 11, 0.4); box-shadow: inset 0 0 15px rgba(245, 158, 11, 0.05); }
+.risk-level-high { border-color: rgba(239, 68, 68, 0.5); box-shadow: inset 0 0 20px rgba(239, 68, 68, 0.1); }
+
+/* Animação de pulso para risco crítico */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}

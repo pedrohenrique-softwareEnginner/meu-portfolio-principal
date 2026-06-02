@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechPulse • Painel Heurístico de Risco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="dashboard-header">
+            <div class="logo">🚨 HEURISTIC RISK ENGINE v1.0</div>
+            <div id="system-status" class="status-badge status-green">SISTEMA NOMINAL</div>
+        </header>
+
+        <div class="dashboard-grid">
+            
+            <section class="card control-panel">
+                <h3>Vetor de Análise (Métricas)</h3>
+                <p class="instruction">Altere as variáveis para calcular o score de ameaça computacional em tempo real.</p>
+                
+                <div class="input-group">
+                    <label for="input-logins">Tentativas de Login Falhadas (Minuto): <span id="val-logins">0</span></label>
+                    <input type="range" id="input-logins" min="0" max="100" value="0">
+                </div>
+
+                <div class="input-group">
+                    <label for="input-traffic">Volhttps://github.com/pedrohenrique-softwareEnginnerume de Tráfego Anômalo (GB/s): <span id="val-traffic">0</span></label>
+                    <input type="range" id="input-traffic" min="0" max="50" value="0">
+                </div>
+
+                <div class="input-group">
+                    <label>Origem da Requisição (Geolocalização):</label>
+                    <select id="input-geo">
+                        <option value="0">Rede Interna Provedora (Risco Zero)</option>
+                        <option value="15">Região Conhecida / VPN Doméstica (Risco Baixo)</option>
+                        <option value="40">Zona de Tráfego Suspeito (Risco Médio)</option>
+                        <option value="75">IP Blacklistado Internacional (Risco Crítico)</option>
+                    </select>
+                </div>
+            </section>
+
+            <section id="risk-display" class="card display-panel risk-level-low">
+                <h3>Score de Ameaça Atual</h3>
+                
+                <div class="score-container">
+                    <span id="score-number">0</span><span class="score-max">/100</span>
+                </div>
+
+                <div class="progress-bar-container">
+                    <div id="risk-progress" class="progress-bar" style="width: 0%"></div>
+                </div>
+
+                <div class="verdict-container">
+                    <h4>Veredito do Motor Heurístico:</h4>
+                    <p id="risk-verdict">Tráfego limpo. Nenhuma ação de mitigação é necessária no momento.</p>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

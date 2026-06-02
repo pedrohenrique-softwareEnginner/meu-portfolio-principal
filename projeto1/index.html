@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuardianTech | Cibersegurança Corporativa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🛡️ Guardian<span>Tech</span></div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="nav-menu">
+            <a href="../index.html">Início</a>
+            <a href="#servicos">Serviços</a>
+            <a href="#sandbox">URL Heuristic Scanner</a>
+            <a href="../index.html" class="btn-back">← Voltar ao Portfólio</a>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-text">
+            <span class="alert-tag">⚡ Heuristic Threat Intelligence Engine</span>
+            <h1>Blindamos a Infraestrutura Digital do seu Negócio</h1>
+            <p>Soluções inteligentes de monitoramento, resposta a incidentes e arquitetura de software segura baseada em evidências e análise de riscos.</p>
+            <div class="hero-buttons">
+                <a href="#sandbox" class="btn-cyan">Analisar uma URL Live</a>
+                <a href="#servicos" class="btn-outline">Nossos Serviços</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" id="servicos">
+        <div class="section-header">
+            <h2>Nossas Soluções</h2>
+            <p>Engenharia especializada em segurança digital de ponta a ponta</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="icon">🔍</div>
+                <h3>Pentesting & Auditoria</h3>
+                <p>Análise profunda de vulnerabilidades e testes de intrusão simulados para corrigir brechas.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">📊</div>
+                <h3>Adequação à LGPD</h3>
+                <p>Mapeamento de dados corporativos e implementação de governança digital em conformidade com a lei.</p>
+            </div>
+            <div class="service-card">
+                <div class="icon">🚀</div>
+                <h3>Security by Design</h3>
+                <p>Garantia de que o código-fonte da sua aplicação web nasça blindado e resistente a injeções de exploits.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sandbox" id="sandbox">
+        <div class="section-header">
+            <h2>Heuristic URL Cyber Scanner</h2>
+            <p>Insira qualquer URL real abaixo para que nossa engine faça a desestruturação e análise de risco algorítmica.</p>
+        </div>
+
+        <div class="sandbox-container">
+            <div class="input-area">
+                <label for="payloadInput">Insira a URL completa para análise:</label>
+                <textarea id="payloadInput" rows="4" placeholder="Exemplo: https://www.facebook.com ou cole o link suspeito aqui..."></textarea>
+                
+                <button id="btn-scan" class="btn-cyan">Escanear URL em Tempo Real →</button>
+            </div>
+
+            <div class="result-area">
+                <div class="console-box" id="console-output">
+                    <div class="console-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="console-title">Cyber Threat Intelligence Terminal</span>
+                    </div>
+                    <div class="console-body">
+                        <p class="system-line">[SYSTEM] Engine Heurística GuardianTech online. Aguardando string de URL...</p>
+                        <div id="scan-verdict"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

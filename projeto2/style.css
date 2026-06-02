@@ -1,0 +1,229 @@
+/* ==========================================================================
+   1. DEFINIÇÃO DE VARIÁVEIS DE COR (PALETAS DINÂMICAS)
+   ========================================================================== */
+:root {
+    /* Tema Claro (Light Mode) */
+    --bg-primary: #F8F9FA;
+    --bg-card: #FFFFFF;
+    --border-color: #E2E8F0;
+    --text-main: #1E293B;
+    --text-muted: #64748B;
+    --accent-color: #6366F1; /* Roxo Indigo moderno */
+    --accent-hover: #4F46E5;
+}
+
+body.dark-mode {
+    /* Tema Escuro (Dark Mode) */
+    --bg-primary: #0F172A; /* Azul escuro profundo */
+    --bg-card: #1E293B;    /* Card um tom mais claro */
+    --border-color: #334155;
+    --text-main: #F1F5F9;
+    --text-muted: #94A3B8;
+    --accent-color: #38BDF8; /* Azul Celeste néon */
+    --accent-hover: #0EA5E9;
+}
+
+/* ==========================================================================
+   2. CONFIGURAÇÕES GLOBAIS
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, sans-serif;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    min-height: 100vh;
+}
+
+/* ==========================================================================
+   3. CABEÇALHO (HEADER)
+   ========================================================================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+}
+
+.logo span {
+    color: var(--accent-color);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Botão de Alternar Tema */
+.theme-btn {
+    background-color: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    color: var(--text-main);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.theme-btn:hover {
+    border-color: var(--accent-color);
+}
+
+.btn-back {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-back:hover {
+    color: var(--text-main);
+}
+
+/* ==========================================================================
+   4. LAYOUT DO PORTAL (GRID & LAYOUT DESIGN)
+   ========================================================================== */
+.portal-container {
+    padding: 50px 8%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+/* Bloco da Manchete Principal */
+.main-news {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 50px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.badge-tag {
+    background-color: rgba(99, 102, 241, 0.1);
+    color: var(--accent-color);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+body.dark-mode .badge-tag {
+    background-color: rgba(56, 189, 248, 0.1);
+}
+
+.badge-tag.hot {
+    background-color: #EF4444;
+    color: #FFFFFF;
+}
+
+.main-news h1 {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.news-meta {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.news-excerpt {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-muted);
+    margin-bottom: 30px;
+    max-width: 900px;
+}
+
+.read-more {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.read-more:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* Grelha de Notícias Menores (CSS Grid Responsivo) */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.news-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.news-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.news-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.news-card p {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.card-link {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.card-link:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   5. RESPONSIVIDADE (MOBILE DESIGN)
+   ========================================================================== */
+@media (max-width: 768px) {
+    header { padding: 20px 4%; }
+    .portal-container { padding: 30px 4%; }
+    .main-news { padding: 30px 20px; }
+    .main-news h1 { font-size: 26px; }
+}

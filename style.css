@@ -1,0 +1,233 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #0B0F19; /* Azul escuro profundo e profissional */
+    color: #E2E8F0;
+    overflow-x: hidden;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: rgba(11, 15, 25, 0.8);
+    backdrop-filter: blur(12px); /* Efeito vidro fosco */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #1E293B;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: 800;
+    color: #FFF;
+}
+
+header .logo b {
+    color: #00E5FF; /* Ponto néon */
+}
+
+header nav a {
+    color: #94A3B8;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #00E5FF;
+}
+
+/* Secção Hero (Apresentação) */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    padding: 0 8%;
+    margin-top: 80px;
+    background: radial-gradient(circle at 80% 20%, rgba(0, 229, 255, 0.05) 0%, transparent 50%);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.tag {
+    background-color: rgba(0, 229, 255, 0.1);
+    color: #00E5FF;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 229, 255, 0.2);
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 800;
+    color: #FFF;
+    line-height: 1.2;
+}
+
+.hero h1 span {
+    color: #00E5FF;
+}
+
+.hero h2 {
+    font-size: 26px;
+    color: #94A3B8;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.hero p {
+    color: #64748B;
+    font-size: 17px;
+    line-height: 1.6;
+    margin: 20px 0 35px 0;
+}
+
+.btn-primary {
+    background-color: #00E5FF;
+    color: #0B0F19;
+    text-decoration: none;
+    padding: 14px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 15px;
+    box-shadow: 0 4px 14px rgba(0, 229, 255, 0.3);
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 229, 255, 0.5);
+}
+
+/* Secção de Projetos (Grid) */
+.portfolio-section {
+    padding: 80px 8%;
+    background-color: #0F172A; /* Divisão visual sutil de bloco */
+}
+
+.section-title {
+    margin-bottom: 50px;
+}
+
+.section-title h3 {
+    font-size: 32px;
+    color: #FFF;
+    font-weight: 800;
+}
+
+.section-title p {
+    color: #64748B;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #1E293B;
+    border: 1px solid #334155;
+    padding: 30px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #00E5FF;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.project-badge {
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #00E5FF;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.project-card h4 {
+    font-size: 20px;
+    color: #FFF;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.project-card p {
+    color: #94A3B8;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.btn-project {
+    color: #00E5FF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    align-self: flex-start;
+}
+
+.btn-project:hover {
+    color: #FFF;
+}
+
+/* Rodapé */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 8%;
+    background-color: #0B0F19;
+    border-top: 1px solid #1E293B;
+    font-size: 14px;
+    color: #64748B;
+}
+
+footer .social-links a {
+    color: #94A3B8;
+    text-decoration: none;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #00E5FF;
+}
+
+/* Responsividade Básica */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 36px; }
+    .hero h2 { font-size: 20px; }
+    footer { flex-direction: column; gap: 15px; text-align: center; }
+}
