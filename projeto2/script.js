@@ -3,8 +3,8 @@
 // ==========================================================================
 
 // ⚠️ ATENÇÃO: Lembra-te de colocar aqui as tuas chaves REAIS do Supabase!
-const SUPABASE_URL = "A_TUA_URL_DO_SUPABASE_AQUI";
-const SUPABASE_ANON_KEY = "A_TUA_CHAVE_ANON_AQUI";
+const SUPABASE_URL = "sb_publishable_AqL_85bfpX_guKPPW6jwqg_qeCdoSAt";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imtuaml2Y25ycG5wamN2eWVlenRqIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc4MDM2OTU5MSwiZXhwIjoyMDk1OTQ1NTkxfQ.Y4hx_qbH4QRnBXTCEl7jBVA_PMJFzulFUq4-7jqR7hc";
 
 // Elementos da interface (DOM)
 const containerNoticias = document.getElementById('noticias-container');
